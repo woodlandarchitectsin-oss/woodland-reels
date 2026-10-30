@@ -11,6 +11,7 @@ Woodland Architects' (Mangaluru) animated Reels/Shorts system. Owner: Woodland (
 ## Scheduled runs: Tuesday + Friday, post at 7:00 PM IST
 - **Tuesday = educational Reel**: topic = first unchecked item in `topics.md` (or your pick). Same format as `posts/2026-10-30-why-you-need-an-architect`.
 - **Friday = project Reel** from a real Woodland project: plan + renders/site photos from `projects/<name>/` (first folder without `used:` in info.txt). If none, ask Woodland in chat for the plan, 3–5 renders/site photos and key facts; build once he sends them. Format: hook (project name, place, plot) → plan reveal with `planReveal` + `pinArea` on 2–3 highlights → renders with `kenBurns` → closing line → end card.
+- **Thursday reminders** (10:47 AM, 3:47 PM, 9:47 PM IST): scheduled task "Friday project Reel – reminder" asks Woodland for the project details until a ready, unused folder exists in `projects/`; whatever he sends is saved there. Stay silent if one is already ready.
 1. Build the video in `work/<slug>/` with the engine (`./engine/build.sh setup` first).
 2. **Vary the house**: never reuse the previous post's drawing. Pick `houseStyle(g,u,style)` from kerala / modern / duplex / courtyard (check `house_style` in the last posts' video.json) and draw topic-specific diagrams new each time. Record `"house_style"` and `"reel_type": "educational"|"project"` in video.json.
 3. Send the MP4 + Instagram caption to Woodland with SendUserFile and a short message; ask him to reply "approve" or request changes. Use PushNotification if available.
