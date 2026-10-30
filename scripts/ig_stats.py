@@ -21,6 +21,14 @@ try:
     acct["daily"] = {i["name"]: i["values"] for i in day}
 except Exception as e:
     acct["daily_error"] = str(e)[:200]
+checks = {}
+import glob
+for mp in glob.glob("posts/*/meta.json"):
+    pm = json.load(open(mp))
+    if pm.get("media_id"):
+        try: checks[mp] = get(pm["media_id"], fields="id,permalink,timestamp,media_product_type,like_count")
+        except Exception as e: checks[mp] = {"error": str(e)[:300]}
+acct["post_checks"] = checks
 now = dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).isoformat(timespec="minutes")
 os.makedirs("stats", exist_ok=True)
 json.dump({"at": now, "account": acct, "media": media}, open("stats/latest.json", "w"), indent=2, ensure_ascii=False)
