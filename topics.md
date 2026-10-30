@@ -8,3 +8,4 @@ Add topics anywhere in this list (or just tell Claude in chat). Claude uses the 
 - [ ] 3 roof choices for coastal homes: Mangalore tiles vs concrete vs metal
 - [ ] Kitchen layout mistakes that make cooking harder
 - [ ] How to stop dampness and seepage in ground-floor walls
+- [x] Why you need an architect to plan your home
