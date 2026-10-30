@@ -1,12 +1,17 @@
 {
-  "at": "2026-10-30T22:34+05:30",
+  "at": "2026-10-30T22:35+05:30",
   "account": {
     "id": "17841466763710255",
     "followers_count": 363,
     "follows_count": 174,
     "media_count": 51,
     "username": "woodland_architects",
-    "daily_error": "{'message': '(#100) The following metrics (profile_views) should be specified with parameter metric_type=total_value', 'code': 100, 'type': 'OAuthException', 'fbtrace_id': 'AJrDgZX_T25WsZhEz_93mWo'}"
+    "daily_error": "{'message': '(#100) The following metrics (profile_views) should be specified with parameter metric_type=total_value', 'code': 100, 'type': 'OAuthException', 'fbtrace_id': 'AdTbzRC2y1Qw7ZjUnZzqHbK'}",
+    "post_checks": {
+      "posts/2026-10-30-why-you-need-an-architect/meta.json": {
+        "error": "{'message': \"Unsupported get request. Object with ID '17964014472251687' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api\", 'code': 100, 'type': 'GraphMethodExcep"
+      }
+    }
   },
   "media": [
     {
