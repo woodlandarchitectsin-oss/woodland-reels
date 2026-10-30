@@ -1,0 +1,19 @@
+{
+  "file": "WL_Reel_Why_You_Need_An_Architect",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "scenes": [
+    { "kicker": "BEFORE YOU BUILD", "title": "Skip the architect?", "title2": "3 reasons not to", "title2_at": "Here",
+      "lines": ["Thinking of building without an architect?", "It usually costs more, not less.", "Here are 3 reasons, straight from Woodland Architects."] },
+    { "kicker": "WOODLAND TIP 01", "title": "A plan for your family", "tip": 1,
+      "lines": ["One: a plan made for how you live.", "No wasted corridors, so every square foot becomes usable space."] },
+    { "kicker": "WOODLAND TIP 02", "title": "Fewer site mistakes", "tip": 2,
+      "lines": ["Two: fewer mistakes on site.", "Detailed drawings fix every beam and window before work starts, so nothing gets broken and rebuilt."] },
+    { "kicker": "WOODLAND TIP 03", "title": "Approvals and budget", "tip": 3,
+      "lines": ["Three: approvals and budget, handled.", "You get licence drawings and a clear estimate, so you know the cost before you spend."] },
+    { "kicker": "PLAN IT RIGHT", "title": "Plan once. Build once.",
+      "lines": ["A good plan pays for itself, many times over."] }
+  ],
+  "end_lines": ["This is Woodland Architects, Mangalore.", "Follow for more smart home design."],
+  "caption": "Building without an architect usually costs more, not less 🏠\n\n1. A plan made for how your family lives, with no wasted space\n2. Detailed drawings that stop costly mistakes on site\n3. Licence drawings and a clear estimate before you spend\n\nPlanning a home in Mangaluru? DM Woodland Architects for a consultation.\n\n#architect #homedesign #mangalore #housePlan #construction #interiordesign #woodlandarchitects"
+}

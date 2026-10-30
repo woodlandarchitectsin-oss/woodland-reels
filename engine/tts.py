@@ -7,7 +7,9 @@ from scipy.signal import resample_poly
 WD = sys.argv[1]; E = os.path.dirname(os.path.abspath(__file__)); M = os.path.expanduser('~/.cache/wlreels')
 spec = json.load(open(f'{WD}/video.json'))
 k = Kokoro(f'{M}/kokoro.onnx', f'{M}/voices.bin')
-VOICE = spec.get('voice', 'am_michael'); SPEED = spec.get('speed', 1.05)
+VOICE = spec.get('voice', 'hm_omega:0.6+am_michael:0.4'); SPEED = spec.get('speed', 1.0)
+if '+' in VOICE or ':' in VOICE:  # blend, e.g. "hm_omega:0.6+am_michael:0.4"
+    VOICE = sum(k.get_voice_style(n) * float(w) for n, w in (x.split(':') for x in VOICE.split('+')))
 END = spec.get('end_lines', ["This is Woodland Architects, Mangalore.", "Follow for more smart home design."])
 SAY = {"Mangalore": "mango lore", "AC": "A C", "3": "three", "2": "two", "4": "four", "5": "five", "10": "ten"}
 SAY.update(spec.get('say', {}))  # display token -> words spoken (for alignment)

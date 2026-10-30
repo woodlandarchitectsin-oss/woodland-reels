@@ -1,0 +1,21 @@
+{
+  "file": "WL_Reel_Deepu_Residence_Hosangadi",
+  "voice": "hm_omega:0.6+am_michael:0.4",
+  "speed": 1.0,
+  "scenes": [
+    { "kicker": "PROJECT REVEAL  ·  HOSANGADI", "title": "Deepu Residence",
+      "lines": ["This is Deepu Residence at Hosangadi.", "A contemporary tropical home, designed by Woodland Architects."] },
+    { "kicker": "FEATURE GABLE", "title": "Light, without heat",
+      "lines": ["The feature gable uses vertical timber louvers.", "They light up the double-height living room, but keep out the harsh afternoon sun."] },
+    { "kicker": "FLOATING CANOPY", "title": "Shade for the monsoon",
+      "lines": ["A floating concrete canopy with a wooden ceiling shades the entrance and a two-car porch, right through the monsoon."] },
+    { "kicker": "THE PLAN", "title": "An open, green core",
+      "lines": ["Inside, the sitout leads into the living room, then a central dining and family space beside a green courtyard.", "Four bedrooms, a prayer room and a separate wet kitchen complete the plan."] },
+    { "kicker": "MATERIAL PALETTE", "title": "Stone, wood, concrete",
+      "lines": ["Stone, concrete, wood and plaster.", "Natural materials that age beautifully in our climate."] },
+    { "kicker": "WOODLAND ARCHITECTS", "title": "Your home, next?",
+      "lines": ["Planning your home? Let's design it together."] }
+  ],
+  "end_lines": ["This is Woodland Architects, Mangalore.", "Follow for more smart home design."],
+  "caption": "Project reveal: Deepu Residence, Hosangadi 🌴 A contemporary tropical home with a timber-louvered feature gable, a floating canopy over a two-car porch, and an open plan wrapped around a green courtyard.\n\nPlanning your home in Mangaluru, Kasaragod or Manjeshwar? DM Woodland Architects.\n\n#projectreveal #tropicalhome #kerala #kasaragod #mangalore #contemporaryhome #architecture #woodlandarchitects"
+}

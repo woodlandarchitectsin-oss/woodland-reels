@@ -5,9 +5,9 @@ const fs = require('fs'), path = require('path'), { spawn, execFileSync } = requ
 const E = __dirname; const [WD, mode, arg] = process.argv.slice(2);
 const b64 = f => fs.readFileSync(f).toString('base64');
 const fd = E + '/node_modules/@fontsource/';
-// project media from video.json "images": downscale to <=1600px JPEG/PNG and embed as data URIs
+// project media from video.json "images": downscale to <=1600px and embed as data URIs -> IMG.<key>
 const SPEC0 = JSON.parse(fs.readFileSync(WD + '/video.json'));
-fs.mkdirSync(WD + '/.img', { recursive: true });
+if (SPEC0.images) fs.mkdirSync(WD + '/.img', { recursive: true });
 const IMGS = Object.entries(SPEC0.images || {}).map(([k, f]) => {
   const src = path.resolve(WD, f), png = /\.png$/i.test(f), out = `${WD}/.img/${k}.${png ? 'png' : 'jpg'}`;
   if (!fs.existsSync(out) || fs.statSync(out).mtimeMs < fs.statSync(src).mtimeMs)
@@ -22,14 +22,14 @@ body{margin:0}</style></head><body><canvas id=c width=1080 height=1920></canvas>
 <script>const SPEC=${fs.readFileSync(WD + '/video.json')};const TL=${fs.readFileSync(WD + '/timeline.json')};</script>
 <script>${fs.readFileSync(E + '/engine.js')}</script>
 <script>const IMG={};${JSON.stringify(IMGS)}.forEach(([k,u])=>{IMG[k]=new Image();IMG[k].src=u;});</script>
+<script>${fs.readFileSync(WD + '/scenes.js')}</script>
 <script>const LOGO=new Image();LOGO.src='data:image/png;base64,${b64(E + '/assets/wl_logo_full.png')}';
 window.ready=Promise.all([document.fonts.load('600 30px Jost'),document.fonts.load('700 30px Jost'),document.fonts.load('700 30px "Cormorant Garamond"'),LOGO.decode(),...Object.values(IMG).map(i=>i.decode())]);
-window.frame=t=>{render(t);return document.getElementById('c').toDataURL('image/jpeg',.92).slice(23)};</script>
-<script>${fs.readFileSync(WD + '/scenes.js')}</script></body></html>`;
+window.frame=t=>{render(t);return document.getElementById('c').toDataURL('image/jpeg',.92).slice(23)};</script></body></html>`;
 (async () => {
   const br = await chromium.launch(); const pg = await br.newPage({ viewport: { width: 1080, height: 1920 } });
   pg.on('pageerror', e => { console.error('PAGEERR', e.message); process.exit(1); });
-  await pg.setContent(html); await pg.evaluate(() => window.ready);
+  await pg.setContent(html); await pg.evaluate(() => Promise.all([window.ready, window.SCENES_READY || 0]));
   const TL = JSON.parse(fs.readFileSync(WD + '/timeline.json'));
   if ((JSON.parse(fs.readFileSync(WD + '/video.json')).scenes.length + 1) !== TL.bounds.length - 1) { console.error('scene count mismatch: rerun tts.py'); process.exit(1); }
   if (mode === 'preview') {
