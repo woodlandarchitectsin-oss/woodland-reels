@@ -1,0 +1,48 @@
+name: Post approved Reels
+
+on:
+  schedule:
+    # every 30 min from 7:00 PM to 10:30 PM IST (13:30–17:00 UTC); posts go out once their post_at has passed
+    - cron: "*/30 13-16 * * *"
+  workflow_dispatch:
+    inputs:
+      check_only:
+        description: "Only verify the Instagram token (post nothing)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post-reels
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Verify token
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.check_only }}
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python scripts/post_instagram.py --check
+      - name: Publish due posts
+        if: ${{ github.event_name == 'schedule' || !inputs.check_only }}
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python scripts/post_instagram.py
+      - name: Save post status
+        if: ${{ github.event_name == 'schedule' || !inputs.check_only }}
+        run: |
+          git config user.name "woodland-reels-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add posts
+          git diff --cached --quiet || (git commit -m "Update post status" && git push)

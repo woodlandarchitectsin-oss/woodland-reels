@@ -1,0 +1,19 @@
+{
+  "file": "WL_Reel_Cool_Home_Without_AC",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "scenes": [
+    { "kicker": "COASTAL HOME DESIGN", "title": "No AC needed.", "title2": "3 design tricks", "title2_at": "Here",
+      "lines": ["Your home doesn't need AC to stay cool.", "It needs better design.", "Here are 3 tricks we use at Woodland Architects for coastal homes."] },
+    { "kicker": "WOODLAND TIP 01", "title": "Deep roof overhangs", "tip": 1,
+      "lines": ["One: deep roof overhangs.", "A 3-foot projection shades your walls, so they don't soak up heat all afternoon."] },
+    { "kicker": "WOODLAND TIP 02", "title": "Cross ventilation", "tip": 2,
+      "lines": ["Two: cross ventilation.", "Windows on opposite walls let the sea breeze flow straight through every room."] },
+    { "kicker": "WOODLAND TIP 03", "title": "Open courtyard", "tip": 3,
+      "lines": ["Three: an open courtyard.", "Hot air rises out, and cooler air is pulled in from below.", "It works like a natural chimney."] },
+    { "kicker": "SMART HOME DESIGN", "title": "Design it right once.",
+      "lines": ["Design it right once, and your home keeps you cool for decades."] }
+  ],
+  "end_lines": ["This is Woodland Architects, Mangalore.", "Follow for more smart home design."],
+  "caption": "3 ways to keep your home cool without AC 🌴 Deep overhangs, cross ventilation and an open courtyard — passive cooling that works for decades.\n\nPlanning a home in Mangaluru? DM Woodland Architects for a consultation.\n\n#homedesign #kerala #mangalore #architecture #passivecooling #tropicalhome #woodlandarchitects"
+}

@@ -1,0 +1,5 @@
+engine/node_modules/
+engine/engine.js
+engine/package*.json
+work/
+__pycache__/
