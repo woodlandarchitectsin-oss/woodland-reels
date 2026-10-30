@@ -108,3 +108,97 @@ function house(g, u, glow = 0, sc = 1, oy = 0) {
   // pillars of verandah
   g.restore();
 }
+// ---------- House styles: vary every video (record the style in video.json "house_style") ----------
+// houseStyle(g, u, style, glow): 'kerala' (hip roof, default house()), 'modern' (flat-roof box with cantilever + fins),
+// 'duplex' (two storey, gable roof, balcony), 'courtyard' (low wide villa with central open court)
+function _win(g, x, y, w, h, a, glow, bars = 3) {
+  g.save(); g.globalAlpha *= a;
+  g.fillStyle = glow > 0 ? mix('#E4EEF0', '#F2B84B', glow) : '#E4EEF0';
+  if (glow > 0) { g.shadowColor = C.glow; g.shadowBlur = 40 * glow; }
+  g.fillRect(x, y, w, h); g.shadowBlur = 0;
+  g.strokeStyle = C.brown; g.lineWidth = 4; g.strokeRect(x, y, w, h);
+  g.lineWidth = 2.5; for (let i = 1; i < bars; i++) { g.beginPath(); g.moveTo(x + w * i / bars, y); g.lineTo(x + w * i / bars, y + h); g.stroke(); }
+  g.restore();
+}
+function _box(g, x, y, w, h, p, fill = '#FBF8EF') {
+  g.save(); g.globalAlpha *= clamp(p * 1.5); g.fillStyle = fill; g.fillRect(x, y, w, h); g.restore();
+  g.strokeStyle = C.ink; g.lineWidth = 6; poly(g, [[x, y + h], [x, y], [x + w, y], [x + w, y + h]], p);
+}
+function houseStyle(g, u, style = 'kerala', glow = 0) {
+  if (style === 'kerala') return house(g, u, glow);
+  const p = k => ease((u - k * .35) / 1.1);
+  g.lineJoin = 'round'; g.lineCap = 'round';
+  ground(g, 1180, p(0));
+  if (style === 'modern') {
+    _box(g, 300, 960, 560, 220, p(1));
+    _box(g, 180, 770, 560, 190, p(2), '#F1E7D3');
+    g.strokeStyle = C.ink; g.lineWidth = 12; poly(g, [[150, 765], [880, 765]], p(2.5)); poly(g, [[150, 958], [880, 958]], p(2.5));
+    g.save(); g.globalAlpha *= p(3); g.strokeStyle = C.tan; g.lineWidth = 9;
+    for (let x = 580; x <= 720; x += 28) { g.beginPath(); g.moveTo(x, 790); g.lineTo(x, 945); g.stroke(); } g.restore();
+    _win(g, 220, 800, 300, 120, p(3), glow, 4);
+    _win(g, 360, 1000, 260, 180, p(3.4), glow, 3);
+    _win(g, 680, 1010, 120, 110, p(3.6), glow, 2);
+    g.save(); g.globalAlpha *= p(3.8); g.fillStyle = '#4E6B3A';
+    [[880, 1180], [925, 1180]].forEach(([x, y]) => { g.beginPath(); g.ellipse(x, y - 40, 26, 42, 0, 0, 7); g.fill(); }); g.restore();
+  } else if (style === 'duplex') {
+    _box(g, 220, 970, 640, 210, p(1));
+    g.strokeStyle = C.ink; g.lineWidth = 10; poly(g, [[180, 968], [900, 968]], p(1.6));
+    _box(g, 300, 800, 480, 168, p(2));
+    const rp = p(2.6);
+    g.save(); g.globalAlpha *= rp; g.fillStyle = '#E7C2A4'; g.beginPath(); g.moveTo(250, 805); g.lineTo(540, 650); g.lineTo(830, 805); g.closePath(); g.fill();
+    g.strokeStyle = C.heat; g.globalAlpha *= .5; g.lineWidth = 3;
+    for (let y = 680; y < 805; y += 22) { const f = (y - 650) / 155; g.beginPath(); g.moveTo(540 - 290 * f, y); g.lineTo(540 + 290 * f, y); g.stroke(); } g.restore();
+    g.strokeStyle = C.ink; g.lineWidth = 6; poly(g, [[250, 805], [540, 650], [830, 805]], rp, true);
+    g.save(); g.globalAlpha *= p(3); g.strokeStyle = C.brown; g.lineWidth = 3;
+    poly(g, [[180, 930], [900, 930]]); for (let x = 190; x <= 890; x += 30) { g.beginPath(); g.moveTo(x, 930); g.lineTo(x, 966); g.stroke(); } g.restore();
+    _win(g, 340, 830, 140, 90, p(3.2), glow); _win(g, 600, 830, 140, 90, p(3.3), glow);
+    _win(g, 270, 1020, 150, 110, p(3.5), glow); _win(g, 660, 1020, 150, 110, p(3.6), glow);
+    g.save(); g.globalAlpha *= p(3.6); g.fillStyle = glow > 0 ? mix('#FBF8EF', '#F2B84B', glow * .8) : '#FBF8EF'; g.fillRect(490, 1000, 100, 180);
+    g.strokeStyle = C.brown; g.lineWidth = 5; g.strokeRect(490, 1000, 100, 180); g.restore();
+  } else if (style === 'courtyard') {
+    _box(g, 120, 980, 340, 200, p(1)); _box(g, 620, 980, 340, 200, p(1.1));
+    const rp = p(2);
+    [[90, 490], [590, 990]].forEach(([a, b]) => {
+      g.save(); g.globalAlpha *= rp; g.fillStyle = '#E7C2A4'; g.beginPath(); g.moveTo(a, 985); g.lineTo((a + b) / 2, 860); g.lineTo(b, 985); g.closePath(); g.fill(); g.restore();
+      g.strokeStyle = C.ink; g.lineWidth = 6; poly(g, [[a, 985], [(a + b) / 2, 860], [b, 985]], rp, true);
+    });
+    g.strokeStyle = C.ink; g.lineWidth = 5; poly(g, [[460, 1180], [460, 1060], [620, 1060], [620, 1180]], p(2.6));
+    g.save(); g.globalAlpha *= p(3); g.strokeStyle = '#4E6B3A'; g.lineWidth = 6;
+    for (let i = 0; i < 6; i++) { const an = -Math.PI / 2 + (i - 2.5) * .3; g.beginPath(); g.moveTo(540, 1150); g.quadraticCurveTo(540 + Math.cos(an) * 30, 1110, 540 + Math.cos(an) * 60, 1150 + Math.sin(an) * 110); g.stroke(); } g.restore();
+    _win(g, 170, 1030, 110, 100, p(3.2), glow); _win(g, 320, 1030, 100, 100, p(3.3), glow);
+    _win(g, 660, 1030, 100, 100, p(3.4), glow); _win(g, 800, 1030, 110, 100, p(3.5), glow);
+  }
+}
+
+// ---------- Real project media (plans, renders, site photos) ----------
+// video.json "images": {"plan": "plan.png", "r1": "render1.jpg"} -> IMG.plan, IMG.r1 (loaded by render.js)
+function drawCover(g, img, x, y, w, h, zoom = 1, fx = .5, fy = .5) {
+  const s = Math.max(w / img.width, h / img.height) * zoom, iw = img.width * s, ih = img.height * s;
+  g.drawImage(img, x + (w - iw) * fx, y + (h - ih) * fy, iw, ih);
+}
+function framed(g, x, y, w, h, fn) { // paper mat + ink frame around media
+  g.save(); g.fillStyle = '#FBF8EF'; g.shadowColor = 'rgba(26,17,9,.18)'; g.shadowBlur = 24; g.fillRect(x - 14, y - 14, w + 28, h + 28); g.restore();
+  g.save(); g.beginPath(); g.rect(x, y, w, h); g.clip(); fn(); g.restore();
+  g.strokeStyle = C.ink; g.lineWidth = 4; g.strokeRect(x, y, w, h);
+}
+// slow push-in on a render/photo; dir 1 = drift right, -1 = drift left
+function kenBurns(g, img, x, y, w, h, u, d, dir = 1) {
+  const k = clamp(u / Math.max(d, .1));
+  framed(g, x, y, w, h, () => drawCover(g, img, x, y, w, h, 1.04 + .1 * k, .5 + dir * .06 * (k - .5), .5));
+}
+// plan drawing revealed by a gold scan line, white/transparent backgrounds look best (multiply blend)
+function planReveal(g, img, x, y, w, h, p) {
+  const s = Math.min(w / img.width, h / img.height), iw = img.width * s, ih = img.height * s, ix = x + (w - iw) / 2, iy = y + (h - ih) / 2;
+  g.save(); g.fillStyle = '#FBF8EF'; g.fillRect(x, y, w, h);
+  g.beginPath(); g.rect(ix, iy, iw * clamp(p), ih); g.clip(); g.globalCompositeOperation = 'multiply'; g.drawImage(img, ix, iy, iw, ih); g.restore();
+  if (p > 0 && p < 1) { g.save(); g.strokeStyle = C.gold; g.lineWidth = 6; g.beginPath(); g.moveTo(ix + iw * p, iy - 10); g.lineTo(ix + iw * p, iy + ih + 10); g.stroke(); g.restore(); }
+  g.strokeStyle = C.ink; g.lineWidth = 4; g.strokeRect(x, y, w, h);
+}
+// highlight a region of a plan (pulsing gold ring) with a label: rx,ry,rw,rh in canvas px
+function pinArea(g, rx, ry, rw, rh, txt, a, t) {
+  if (a <= 0) return;
+  g.save(); g.globalAlpha *= a; g.strokeStyle = C.gold; g.lineWidth = 6 + Math.sin(t * 5) * 1.5;
+  g.beginPath(); g.roundRect(rx, ry, rw, rh, 10); g.stroke();
+  g.fillStyle = 'rgba(200,151,58,.12)'; g.fill(); g.restore();
+  label(g, txt, rx + rw / 2, ry - 14, C.ink, 24, 'center', a);
+}

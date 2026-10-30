@@ -1,10 +1,19 @@
 // usage: node render.js <workdir> preview t1,t2,...  |  node render.js <workdir> scene <i>
 // workdir holds video.json, scenes.js, timeline.json (from tts.py)
 const { chromium } = require('playwright');
-const fs = require('fs'), path = require('path'), { spawn } = require('child_process');
+const fs = require('fs'), path = require('path'), { spawn, execFileSync } = require('child_process');
 const E = __dirname; const [WD, mode, arg] = process.argv.slice(2);
 const b64 = f => fs.readFileSync(f).toString('base64');
 const fd = E + '/node_modules/@fontsource/';
+// project media from video.json "images": downscale to <=1600px JPEG/PNG and embed as data URIs
+const SPEC0 = JSON.parse(fs.readFileSync(WD + '/video.json'));
+fs.mkdirSync(WD + '/.img', { recursive: true });
+const IMGS = Object.entries(SPEC0.images || {}).map(([k, f]) => {
+  const src = path.resolve(WD, f), png = /\.png$/i.test(f), out = `${WD}/.img/${k}.${png ? 'png' : 'jpg'}`;
+  if (!fs.existsSync(out) || fs.statSync(out).mtimeMs < fs.statSync(src).mtimeMs)
+    execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', src, '-vf', "scale='min(1600,iw)':-2", ...(png ? [] : ['-q:v', '3']), out]);
+  return [k, `data:image/${png ? 'png' : 'jpeg'};base64,` + b64(out)];
+});
 const html = `<!doctype html><html><head><style>
 @font-face{font-family:Jost;font-weight:600;src:url(data:font/woff2;base64,${b64(fd + 'jost/files/jost-latin-600-normal.woff2')})}
 @font-face{font-family:Jost;font-weight:700;src:url(data:font/woff2;base64,${b64(fd + 'jost/files/jost-latin-700-normal.woff2')})}
@@ -12,10 +21,11 @@ const html = `<!doctype html><html><head><style>
 body{margin:0}</style></head><body><canvas id=c width=1080 height=1920></canvas>
 <script>const SPEC=${fs.readFileSync(WD + '/video.json')};const TL=${fs.readFileSync(WD + '/timeline.json')};</script>
 <script>${fs.readFileSync(E + '/engine.js')}</script>
-<script>${fs.readFileSync(WD + '/scenes.js')}</script>
+<script>const IMG={};${JSON.stringify(IMGS)}.forEach(([k,u])=>{IMG[k]=new Image();IMG[k].src=u;});</script>
 <script>const LOGO=new Image();LOGO.src='data:image/png;base64,${b64(E + '/assets/wl_logo_full.png')}';
-window.ready=Promise.all([document.fonts.load('600 30px Jost'),document.fonts.load('700 30px Jost'),document.fonts.load('700 30px "Cormorant Garamond"'),LOGO.decode()]);
-window.frame=t=>{render(t);return document.getElementById('c').toDataURL('image/jpeg',.92).slice(23)};</script></body></html>`;
+window.ready=Promise.all([document.fonts.load('600 30px Jost'),document.fonts.load('700 30px Jost'),document.fonts.load('700 30px "Cormorant Garamond"'),LOGO.decode(),...Object.values(IMG).map(i=>i.decode())]);
+window.frame=t=>{render(t);return document.getElementById('c').toDataURL('image/jpeg',.92).slice(23)};</script>
+<script>${fs.readFileSync(WD + '/scenes.js')}</script></body></html>`;
 (async () => {
   const br = await chromium.launch(); const pg = await br.newPage({ viewport: { width: 1080, height: 1920 } });
   pg.on('pageerror', e => { console.error('PAGEERR', e.message); process.exit(1); });
