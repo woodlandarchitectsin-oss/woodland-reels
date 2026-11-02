@@ -1,12 +1,12 @@
 {
-  "at": "2026-10-30T22:35+05:30",
+  "at": "2026-11-02T09:32+05:30",
   "account": {
     "id": "17841466763710255",
-    "followers_count": 363,
+    "followers_count": 364,
     "follows_count": 174,
     "media_count": 51,
     "username": "woodland_architects",
-    "daily_error": "{'message': '(#100) The following metrics (profile_views) should be specified with parameter metric_type=total_value', 'code': 100, 'type': 'OAuthException', 'fbtrace_id': 'AdTbzRC2y1Qw7ZjUnZzqHbK'}",
+    "daily_error": "{'message': '(#100) The following metrics (profile_views) should be specified with parameter metric_type=total_value', 'code': 100, 'type': 'OAuthException', 'fbtrace_id': 'AhCdJqpKI8H4byxBiQ8Vulp'}",
     "post_checks": {
       "posts/2026-10-30-why-you-need-an-architect/meta.json": {
         "error": "{'message': \"Unsupported get request. Object with ID '17964014472251687' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api\", 'code': 100, 'type': 'GraphMethodExcep"
@@ -18,17 +18,17 @@
       "id": "18128908687879566",
       "caption": "A home that stays cool, bright and dry, by design. 🌴\n\nDeepu Residence, Hosangadi",
       "comments_count": 0,
-      "like_count": 15,
+      "like_count": 21,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfHs4TsT4jq/",
       "timestamp": "2026-10-30T13:37:13+0000",
       "insights": {
-        "reach": 348,
+        "reach": 497,
         "saved": 1,
-        "shares": 4,
-        "total_interactions": 20,
-        "views": 614
+        "shares": 5,
+        "total_interactions": 27,
+        "views": 901
       }
     },
     {
@@ -41,11 +41,11 @@
       "permalink": "https://www.instagram.com/reel/DVyZwO7k8Kb/",
       "timestamp": "2026-03-12T14:30:16+0000",
       "insights": {
-        "reach": 5442,
+        "reach": 5443,
         "saved": 4,
         "shares": 12,
         "total_interactions": 73,
-        "views": 7102
+        "views": 7111
       }
     },
     {
@@ -58,11 +58,11 @@
       "permalink": "https://www.instagram.com/reel/DOVmW4fk1LQ/",
       "timestamp": "2025-09-08T10:15:05+0000",
       "insights": {
-        "reach": 1721,
+        "reach": 1723,
         "saved": 1,
         "shares": 17,
         "total_interactions": 87,
-        "views": 3106
+        "views": 3113
       }
     },
     {
@@ -75,11 +75,11 @@
       "permalink": "https://www.instagram.com/reel/DNXSOjAzXbE/",
       "timestamp": "2025-08-15T05:27:37+0000",
       "insights": {
-        "reach": 365,
+        "reach": 366,
         "saved": 0,
         "shares": 0,
         "total_interactions": 11,
-        "views": 416
+        "views": 417
       }
     },
     {
@@ -96,7 +96,7 @@
         "saved": 1,
         "shares": 3,
         "total_interactions": 93,
-        "views": 3731
+        "views": 3733
       }
     },
     {
@@ -109,11 +109,11 @@
       "permalink": "https://www.instagram.com/reel/DM9rrA-TXGZ/",
       "timestamp": "2025-08-05T06:49:57+0000",
       "insights": {
-        "reach": 1910,
+        "reach": 1912,
         "saved": 3,
         "shares": 8,
         "total_interactions": 88,
-        "views": 3430
+        "views": 3431
       }
     },
     {
@@ -190,11 +190,11 @@
       "permalink": "https://www.instagram.com/reel/DLpW642TnIv/",
       "timestamp": "2025-07-03T12:49:32+0000",
       "insights": {
-        "reach": 2011,
+        "reach": 2017,
         "saved": 0,
         "shares": 11,
         "total_interactions": 72,
-        "views": 3316
+        "views": 3318
       }
     },
     {
@@ -207,11 +207,11 @@
       "permalink": "https://www.instagram.com/reel/DLZCdAzz9Kc/",
       "timestamp": "2025-06-27T04:47:06+0000",
       "insights": {
-        "reach": 2925,
+        "reach": 2929,
         "saved": 4,
         "shares": 23,
         "total_interactions": 246,
-        "views": 5614
+        "views": 5618
       }
     },
     {
@@ -224,11 +224,11 @@
       "permalink": "https://www.instagram.com/reel/DLT_gfRzk8k/",
       "timestamp": "2025-06-25T05:40:57+0000",
       "insights": {
-        "reach": 1641,
+        "reach": 1646,
         "saved": 0,
         "shares": 6,
         "total_interactions": 76,
-        "views": 2811
+        "views": 2813
       }
     },
     {
@@ -257,11 +257,11 @@
       "permalink": "https://www.instagram.com/reel/DKlOw5kzwMQ/",
       "timestamp": "2025-06-07T02:02:00+0000",
       "insights": {
-        "reach": 887,
+        "reach": 889,
         "saved": 0,
         "shares": 2,
         "total_interactions": 43,
-        "views": 1392
+        "views": 1393
       }
     },
     {
@@ -274,11 +274,11 @@
       "permalink": "https://www.instagram.com/reel/DKZfQsaTdYn/",
       "timestamp": "2025-06-02T12:23:03+0000",
       "insights": {
-        "reach": 1164,
+        "reach": 1166,
         "saved": 1,
         "shares": 2,
         "total_interactions": 42,
-        "views": 2333
+        "views": 2335
       }
     },
     {
@@ -295,7 +295,7 @@
         "saved": 0,
         "shares": 6,
         "total_interactions": 63,
-        "views": 3133
+        "views": 3134
       }
     },
     {
@@ -312,7 +312,7 @@
         "saved": 0,
         "shares": 157,
         "total_interactions": 246,
-        "views": 2713
+        "views": 2715
       }
     },
     {
@@ -329,7 +329,7 @@
         "saved": 2,
         "shares": 6,
         "total_interactions": 59,
-        "views": 2900
+        "views": 2901
       }
     },
     {
@@ -346,7 +346,7 @@
         "saved": 2,
         "shares": 13,
         "total_interactions": 92,
-        "views": 3119
+        "views": 3120
       }
     },
     {
@@ -363,7 +363,7 @@
         "saved": 2,
         "shares": 1,
         "total_interactions": 109,
-        "views": 4351
+        "views": 4352
       }
     },
     {
@@ -376,11 +376,11 @@
       "permalink": "https://www.instagram.com/reel/DGLN4gJTK84/",
       "timestamp": "2025-02-17T13:17:02+0000",
       "insights": {
-        "reach": 1434,
+        "reach": 1438,
         "saved": 3,
         "shares": 5,
         "total_interactions": 125,
-        "views": 2377
+        "views": 2378
       }
     },
     {
@@ -397,7 +397,7 @@
         "saved": 0,
         "shares": 4,
         "total_interactions": 129,
-        "views": 5537
+        "views": 5538
       }
     },
     {
@@ -414,7 +414,7 @@
         "saved": 1,
         "shares": 6,
         "total_interactions": 92,
-        "views": 4382
+        "views": 4383
       }
     },
     {
@@ -431,7 +431,7 @@
         "saved": 13,
         "shares": 20,
         "total_interactions": 160,
-        "views": 5191
+        "views": 5192
       }
     }
   ]
