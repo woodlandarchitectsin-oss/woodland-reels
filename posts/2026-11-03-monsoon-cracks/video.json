@@ -1,0 +1,22 @@
+{
+  "file": "WL_Reel_Monsoon_Cracks",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "house_style": "duplex",
+  "reel_type": "educational",
+  "say": {"DPC": "D P C"},
+  "scenes": [
+    { "kicker": "MONSOON CHECK", "title": "Cracks after the rain?", "title2": "3 ways to stop them", "title2_at": "Here",
+      "lines": ["Every monsoon, new cracks appear in Mangaluru homes.", "It's not bad luck. It's water and movement.", "Here are 3 fixes we use at Woodland Architects."] },
+    { "kicker": "WOODLAND TIP 01", "title": "Drain water away", "tip": 1,
+      "lines": ["One: keep rain away from the foundation.", "A sloped apron and a side drain stop the soil under your walls from going soft and sinking."] },
+    { "kicker": "WOODLAND TIP 02", "title": "Plinth beam + DPC", "tip": 2,
+      "lines": ["Two: a plinth beam with a DPC.", "The beam ties every wall together, and the damp-proof layer stops moisture rising into them."] },
+    { "kicker": "WOODLAND TIP 03", "title": "Mesh at the joints", "tip": 3,
+      "lines": ["Three: chicken mesh where concrete meets brick.", "They expand differently, so mesh inside the plaster stops those hairline cracks."] },
+    { "kicker": "SMART HOME DESIGN", "title": "Prevent, don't patch.",
+      "lines": ["Cracks are cheap to prevent, and costly to repair."] }
+  ],
+  "end_lines": ["This is Woodland Architects, Mangalore.", "Follow for more smart home design."],
+  "caption": "Why do houses in Mangaluru crack after every monsoon? 🌧️ Water and movement, and both can be designed out.\n\n1. A sloped apron and drain to keep rain away from the foundation\n2. A plinth beam with a DPC to tie the walls and block rising damp\n3. Chicken mesh in the plaster where concrete meets brick\n\nPlanning a home in Mangaluru? DM Woodland Architects for a consultation.\n\n#monsoon #housecracks #construction #homedesign #mangalore #coastalkarnataka #woodlandarchitects"
+}
