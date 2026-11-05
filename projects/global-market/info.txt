@@ -1,0 +1,14 @@
+name: Global Market – Mangalore
+type: Commercial (market complex)
+location: Mangalore, India
+plot size: 6.5 acres
+built-up area: not given
+client: confidential (do not name)
+tagline: "Shaping spaces that inspires the world."
+description (brochure): Global Market – Mangalore is a landmark commercial destination that brings together traders, farmers, food entrepreneurs, artisans, and global consumers under one roof. Designed as a modern, sustainable, and people-friendly space, it fosters local commerce, cultural exchange, and economic growth. Located at a strategic urban junction.
+highlights (brochure wording):
+1. A vibrant mix of retail zones, wholesale hubs, food courts and organic produce sections
+2. Spaces for exhibitions, flea markets, and startup showcases
+3. Brings together traders, farmers, food entrepreneurs, artisans, and global consumers under one roof (plan shows 50 ft wide internal roads)
+source: WOODLAND_ARCHITECTS_BROCHURE.pdf, page 8
+status: waiting for 3–5 renders/site photos (brochure has the plan only)
