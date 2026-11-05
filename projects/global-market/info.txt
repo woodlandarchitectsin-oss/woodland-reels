@@ -12,7 +12,7 @@ highlights (brochure wording):
 3. Brings together traders, farmers, food entrepreneurs, artisans, and global consumers under one roof (plan shows 50 ft wide internal roads)
 source: WOODLAND_ARCHITECTS_BROCHURE.pdf, page 8
 designed: about 4 years ago (per Woodland)
-renders: stills from Woodland's 2026-11-05 walkthrough video; the old "DESIGN+" watermark is cropped out (no other firm's branding). Woodland may send AI-enhanced versions to replace these.
+renders: Real-ESRGAN 4x-enhanced (stored at 2x) stills from Woodland's 2026-11-05 walkthrough video; the old "DESIGN+" watermark is cropped out (no other firm's branding). Woodland may send AI-enhanced versions to replace these.
   render1.jpg = entrance-gate
   render2.jpg = central-plaza
   render3.jpg = plaza-signage
