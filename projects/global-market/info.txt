@@ -1,6 +1,6 @@
-name: Global Market – Mangalore
+name: Global Market – Mangalore (signage in the walkthrough reads "Global Commercial Centre")
 type: Commercial (market complex)
-location: Mangalore, India
+location: Kallapu, Mangalore, India
 plot size: 6.5 acres
 built-up area: not given
 client: confidential (do not name)
@@ -11,4 +11,19 @@ highlights (brochure wording):
 2. Spaces for exhibitions, flea markets, and startup showcases
 3. Brings together traders, farmers, food entrepreneurs, artisans, and global consumers under one roof (plan shows 50 ft wide internal roads)
 source: WOODLAND_ARCHITECTS_BROCHURE.pdf, page 8
-status: waiting for 3–5 renders/site photos (brochure has the plan only)
+designed: about 4 years ago (per Woodland)
+renders: stills from Woodland's 2026-11-05 walkthrough video; the old "DESIGN+" watermark is cropped out (no other firm's branding). Woodland may send AI-enhanced versions to replace these.
+  render1.jpg = entrance-gate
+  render2.jpg = central-plaza
+  render3.jpg = plaza-signage
+  render4.jpg = market-facade
+  render5.jpg = name-wall
+  render6.jpg = open-air-market
+  render7.jpg = shop-rows
+  render8.jpg = restaurant
+  render9.jpg = aerial-1
+  render10.jpg = aerial-2
+  render11.jpg = service-gate
+  render12.jpg = meat-stalls
+  render13.jpg = gate-night
+  render14.jpg = plaza-night
