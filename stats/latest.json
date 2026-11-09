@@ -1,13 +1,20 @@
 {
-  "at": "2026-11-02T09:32+05:30",
+  "at": "2026-11-09T09:32+05:30",
   "account": {
     "id": "17841466763710255",
-    "followers_count": 364,
-    "follows_count": 174,
-    "media_count": 51,
+    "followers_count": 369,
+    "follows_count": 177,
+    "media_count": 53,
     "username": "woodland_architects",
-    "daily_error": "{'message': '(#100) The following metrics (profile_views) should be specified with parameter metric_type=total_value', 'code': 100, 'type': 'OAuthException', 'fbtrace_id': 'AhCdJqpKI8H4byxBiQ8Vulp'}",
+    "daily_error": "{'message': '(#100) The following metrics (profile_views) should be specified with parameter metric_type=total_value', 'code': 100, 'type': 'OAuthException', 'fbtrace_id': 'AiONWGAOezvRm32DZAEjC6a'}",
     "post_checks": {
+      "posts/2026-11-03-monsoon-cracks/meta.json": {
+        "id": "18114829316122001",
+        "like_count": 10,
+        "media_product_type": "REELS",
+        "permalink": "https://www.instagram.com/reel/DfSKeoUDg2t/",
+        "timestamp": "2026-11-03T15:06:17+0000"
+      },
       "posts/2026-10-30-why-you-need-an-architect/meta.json": {
         "error": "{'message': \"Unsupported get request. Object with ID '17964014472251687' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api\", 'code': 100, 'type': 'GraphMethodExcep"
       }
@@ -15,20 +22,37 @@
   },
   "media": [
     {
+      "id": "18114829316122001",
+      "caption": "Why do houses in Mangaluru crack after every monsoon? 🌧️ Water and movement, and",
+      "comments_count": 0,
+      "like_count": 10,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfSKeoUDg2t/",
+      "timestamp": "2026-11-03T15:06:17+0000",
+      "insights": {
+        "reach": 389,
+        "saved": 7,
+        "shares": 2,
+        "total_interactions": 19,
+        "views": 469
+      }
+    },
+    {
       "id": "18128908687879566",
       "caption": "A home that stays cool, bright and dry, by design. 🌴\n\nDeepu Residence, Hosangadi",
       "comments_count": 0,
-      "like_count": 21,
+      "like_count": 23,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfHs4TsT4jq/",
       "timestamp": "2026-10-30T13:37:13+0000",
       "insights": {
-        "reach": 497,
+        "reach": 542,
         "saved": 1,
         "shares": 5,
-        "total_interactions": 27,
-        "views": 901
+        "total_interactions": 29,
+        "views": 982
       }
     },
     {
@@ -41,11 +65,11 @@
       "permalink": "https://www.instagram.com/reel/DVyZwO7k8Kb/",
       "timestamp": "2026-03-12T14:30:16+0000",
       "insights": {
-        "reach": 5443,
+        "reach": 5450,
         "saved": 4,
         "shares": 12,
         "total_interactions": 73,
-        "views": 7111
+        "views": 7129
       }
     },
     {
@@ -58,11 +82,11 @@
       "permalink": "https://www.instagram.com/reel/DOVmW4fk1LQ/",
       "timestamp": "2025-09-08T10:15:05+0000",
       "insights": {
-        "reach": 1723,
+        "reach": 1730,
         "saved": 1,
         "shares": 17,
         "total_interactions": 87,
-        "views": 3113
+        "views": 3122
       }
     },
     {
@@ -75,28 +99,28 @@
       "permalink": "https://www.instagram.com/reel/DNXSOjAzXbE/",
       "timestamp": "2025-08-15T05:27:37+0000",
       "insights": {
-        "reach": 366,
+        "reach": 368,
         "saved": 0,
         "shares": 0,
         "total_interactions": 11,
-        "views": 417
+        "views": 422
       }
     },
     {
       "id": "18016601066749437",
       "caption": "From blank to beautiful🤎— crafted by Woodland Architects.\nLove what you see? Sav",
       "comments_count": 0,
-      "like_count": 87,
+      "like_count": 86,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DNF9_oKsAb9/",
       "timestamp": "2025-08-08T12:02:41+0000",
       "insights": {
-        "reach": 2276,
+        "reach": 2279,
         "saved": 1,
         "shares": 3,
-        "total_interactions": 93,
-        "views": 3733
+        "total_interactions": 92,
+        "views": 3742
       }
     },
     {
@@ -109,11 +133,11 @@
       "permalink": "https://www.instagram.com/reel/DM9rrA-TXGZ/",
       "timestamp": "2025-08-05T06:49:57+0000",
       "insights": {
-        "reach": 1912,
+        "reach": 1915,
         "saved": 3,
         "shares": 8,
         "total_interactions": 88,
-        "views": 3431
+        "views": 3439
       }
     },
     {
@@ -126,7 +150,7 @@
       "permalink": "https://www.instagram.com/p/DMS3OeUyr48/",
       "timestamp": "2025-07-19T15:40:20+0000",
       "insights": {
-        "reach": 353,
+        "reach": 354,
         "saved": 0,
         "shares": 0,
         "total_interactions": 9
@@ -142,7 +166,7 @@
       "permalink": "https://www.instagram.com/p/DMScmWoS8tH/",
       "timestamp": "2025-07-19T11:47:39+0000",
       "insights": {
-        "reach": 381,
+        "reach": 384,
         "saved": 0,
         "shares": 0,
         "total_interactions": 13
@@ -158,7 +182,7 @@
       "permalink": "https://www.instagram.com/p/DMR_ACJy2kP/",
       "timestamp": "2025-07-19T07:29:01+0000",
       "insights": {
-        "reach": 239,
+        "reach": 240,
         "saved": 0,
         "shares": 0,
         "total_interactions": 9
@@ -174,7 +198,7 @@
       "permalink": "https://www.instagram.com/p/DMErv8QTEYQ/",
       "timestamp": "2025-07-14T03:30:13+0000",
       "insights": {
-        "reach": 409,
+        "reach": 413,
         "saved": 0,
         "shares": 7,
         "total_interactions": 32
@@ -194,7 +218,7 @@
         "saved": 0,
         "shares": 11,
         "total_interactions": 72,
-        "views": 3318
+        "views": 3322
       }
     },
     {
@@ -207,11 +231,11 @@
       "permalink": "https://www.instagram.com/reel/DLZCdAzz9Kc/",
       "timestamp": "2025-06-27T04:47:06+0000",
       "insights": {
-        "reach": 2929,
+        "reach": 2933,
         "saved": 4,
         "shares": 23,
         "total_interactions": 246,
-        "views": 5618
+        "views": 5629
       }
     },
     {
@@ -224,11 +248,11 @@
       "permalink": "https://www.instagram.com/reel/DLT_gfRzk8k/",
       "timestamp": "2025-06-25T05:40:57+0000",
       "insights": {
-        "reach": 1646,
+        "reach": 1650,
         "saved": 0,
         "shares": 6,
         "total_interactions": 76,
-        "views": 2813
+        "views": 2820
       }
     },
     {
@@ -241,7 +265,7 @@
       "permalink": "https://www.instagram.com/p/DLEjjYkzH6F/",
       "timestamp": "2025-06-19T05:47:39+0000",
       "insights": {
-        "reach": 828,
+        "reach": 829,
         "saved": 3,
         "shares": 4,
         "total_interactions": 69
@@ -261,7 +285,7 @@
         "saved": 0,
         "shares": 2,
         "total_interactions": 43,
-        "views": 1393
+        "views": 1398
       }
     },
     {
@@ -278,7 +302,7 @@
         "saved": 1,
         "shares": 2,
         "total_interactions": 42,
-        "views": 2335
+        "views": 2341
       }
     },
     {
@@ -295,7 +319,7 @@
         "saved": 0,
         "shares": 6,
         "total_interactions": 63,
-        "views": 3134
+        "views": 3139
       }
     },
     {
@@ -312,7 +336,7 @@
         "saved": 0,
         "shares": 157,
         "total_interactions": 246,
-        "views": 2715
+        "views": 2720
       }
     },
     {
@@ -329,7 +353,7 @@
         "saved": 2,
         "shares": 6,
         "total_interactions": 59,
-        "views": 2901
+        "views": 2906
       }
     },
     {
@@ -342,11 +366,11 @@
       "permalink": "https://www.instagram.com/reel/DIBh3sTTk1-/",
       "timestamp": "2025-04-04T12:09:10+0000",
       "insights": {
-        "reach": 1641,
+        "reach": 1643,
         "saved": 2,
         "shares": 13,
         "total_interactions": 92,
-        "views": 3120
+        "views": 3124
       }
     },
     {
@@ -359,11 +383,11 @@
       "permalink": "https://www.instagram.com/reel/DGpncg4zWgq/",
       "timestamp": "2025-03-01T08:42:37+0000",
       "insights": {
-        "reach": 2652,
+        "reach": 2656,
         "saved": 2,
         "shares": 1,
         "total_interactions": 109,
-        "views": 4352
+        "views": 4357
       }
     },
     {
@@ -376,28 +400,28 @@
       "permalink": "https://www.instagram.com/reel/DGLN4gJTK84/",
       "timestamp": "2025-02-17T13:17:02+0000",
       "insights": {
-        "reach": 1438,
+        "reach": 1442,
         "saved": 3,
         "shares": 5,
         "total_interactions": 125,
-        "views": 2378
+        "views": 2386
       }
     },
     {
       "id": "18025448138642867",
       "caption": "\"🚀 Alif Residence – Adyar, Mangalore is rising! 🏗️ We've reached the plinth leve",
       "comments_count": 1,
-      "like_count": 123,
+      "like_count": 122,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DF0IjQwT6j-/",
       "timestamp": "2025-02-08T14:07:47+0000",
       "insights": {
-        "reach": 3122,
+        "reach": 3126,
         "saved": 0,
         "shares": 4,
-        "total_interactions": 129,
-        "views": 5538
+        "total_interactions": 128,
+        "views": 5546
       }
     },
     {
@@ -414,24 +438,7 @@
         "saved": 1,
         "shares": 6,
         "total_interactions": 92,
-        "views": 4383
-      }
-    },
-    {
-      "id": "18009202043651312",
-      "caption": "\"Where design meets perfection! ✨🏡 This stunning interior is a blend of elegance",
-      "comments_count": 6,
-      "like_count": 121,
-      "media_product_type": "REELS",
-      "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/DFfoDwRz_Eg/",
-      "timestamp": "2025-01-31T15:02:41+0000",
-      "insights": {
-        "reach": 2652,
-        "saved": 13,
-        "shares": 20,
-        "total_interactions": 160,
-        "views": 5192
+        "views": 4387
       }
     }
   ]
